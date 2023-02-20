@@ -100,12 +100,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# The next line updates PATH for Yandex Cloud CLI.
-if [ -f '/Users/phd/yandex-cloud/path.bash.inc' ]; then source '/Users/phd/yandex-cloud/path.bash.inc'; fi
-
-# The next line enables shell command completion for yc.
-if [ -f '/Users/phd/yandex-cloud/completion.zsh.inc' ]; then source '/Users/phd/yandex-cloud/completion.zsh.inc'; fi
-
 alias myip="ifconfig | grep 192 | grep -o -m 1 -E '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | head -n1"
 
 dotz() {
@@ -117,5 +111,4 @@ alias rmrf="rm -rf"
 alias :q="exit"
 alias rngr=ranger
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
+export PATH=$HOME/.local/bin:$PATH
